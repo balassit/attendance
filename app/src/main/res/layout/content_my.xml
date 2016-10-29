@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.blakelassgmail.attendancetracker.MyActivity"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <TextView android:id="@+id/addMember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:paddingLeft="3dp"
+            android:singleLine="false"
+            android:text="@string/roster"
+            android:textSize="30sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/addBtn"
+        android:text="@string/roster_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <ListView
+        android:id="@+id/memberList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:layout_below="@+id/addBtn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+
+</RelativeLayout>
